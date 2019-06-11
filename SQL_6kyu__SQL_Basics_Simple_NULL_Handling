@@ -1,0 +1,14 @@
+--REQ: Uses COALESCE and NULLIF
+--REQ: Replace eusales.name null values with '[product name not found]'
+--REQ: Replace eusales.card_name null values with '[card name not found]'
+--REQ: Drop records where eusales.price Is Null
+--REQ: Filter dataset to prices > 50.00
+SELECT id
+     , COALESCE(NULLIF(name, ''), '[product name not found]') AS name
+     , price
+     , COALESCE(NULLIF(card_name, ''), '[card name not found]') AS card_name
+     , card_number
+     , transaction_date
+  FROM eusales
+ WHERE price > 50.00
+   AND price Is Not Null

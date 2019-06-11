@@ -1,5 +1,5 @@
 --REQ: Return number of liters Nathan will drink for a given cycling trip
-SELECT cycling.id,
-       cycling.hours,
-       FLOOR(cycling.hours * .5) AS liters
+SELECT cycling.id
+     , cycling.hours
+     , FLOOR(cycling.hours * .5) AS liters
   FROM cycling

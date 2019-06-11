@@ -1,0 +1,21 @@
+--REQ: Selects all columns from table "sales"
+--REQ: Where sales.price is greater than 90.00
+--REQ: Uses WITH statement
+--REQ: Subquery called "special_sales"
+  WITH special_sales AS (SELECT DISTINCT sales.id
+                                       , sales.department_id
+                                       , sales.name
+                                       , sales.price
+                                       , sales.card_name
+                                       , sales.card_number
+                                       , sales.transaction_date
+                                    FROM sales
+                                   WHERE sales.price > 90.00)
+
+--REQ: Uses IN statement to check if dept. has sale > 90.00                             
+SELECT DISTINCT departments.id
+              , departments.name
+           FROM departments
+     INNER JOIN sales
+             ON departments.id = sales.department_id
+          WHERE sales.id IN (SELECT sales.id FROM special_sales)

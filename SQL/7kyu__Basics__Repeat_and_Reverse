@@ -1,0 +1,5 @@
+--REQ: Repeat names 3x
+--REQ: Reverse characteristics
+SELECT REPEAT(monsters.name, 3) AS name
+     , REVERSE(monsters.characteristics) AS characteristics
+  FROM monsters

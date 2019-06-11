@@ -1,0 +1,6 @@
+--REQ: Concatenate all columns except id
+SELECT CONCAT_WS(' ', names.prefix
+                    , names.first
+                    , names.last
+                    , names.suffix) AS title
+  FROM names

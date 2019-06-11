@@ -1,0 +1,7 @@
+--REQ: Find the comma location in characteristics for each record
+--REQ: ORDER BY comma
+  SELECT monsters.id
+       , monsters.name
+       , POSITION(',' IN monsters.characteristics) AS comma
+    FROM monsters
+ORDER BY comma

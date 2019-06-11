@@ -1,0 +1,5 @@
+--REQ: Calculate MIN, MEDIAN, and MAX student score from table "results"
+SELECT MIN(result.score) as min
+     , PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY result.score) as median
+     , MAX(result.score) as max
+  FROM result

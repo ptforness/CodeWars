@@ -1,0 +1,3 @@
+--REQ: Create calculated column equal to POWER(number1, number2)
+SELECT POWER(number1, number2) AS result
+  FROM decimals

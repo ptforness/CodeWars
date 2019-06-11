@@ -1,0 +1,7 @@
+--REQ: Sort table 'companies' by employee count (high to low)
+  SELECT companies.id
+       , companies.ceo
+       , companies.motto
+       , companies.employees
+    FROM companies
+ORDER BY employees DESC

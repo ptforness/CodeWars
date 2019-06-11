@@ -1,0 +1,5 @@
+--REQ: SELECT all records for columns custid, custname, custstate
+SELECT customers.custid
+     , customers.custname
+     , customers.custstate
+  FROM customers

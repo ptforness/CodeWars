@@ -1,0 +1,26 @@
+--REQ: Fix the bugs, such that the resultant table meets the following criteria:
+------ day (type:date){group by}[order by asc]
+------ department (type:text){group by}[In a real world situtation it is bad
+------            practice to name a column after a table]
+------ sale_count (type:int)
+
+Initial State:
+
+SELECT 
+  s.transaction_date as day,
+  d.name,
+  COUNT(s.id)
+  FROM department d
+    JOIN sale s on d.id = s.id
+  group by day, d.name
+  order by name desc
+
+Solution:
+
+  SELECT s.transaction_date::date AS day
+       , d.name AS department
+       , COUNT(s.id) AS sale_count
+    FROM department d
+    JOIN sale s on d.id = s.department_id
+GROUP BY day, department
+ORDER BY day ASC

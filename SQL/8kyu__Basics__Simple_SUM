@@ -1,0 +1,3 @@
+--REQ: SUM() ages
+SELECT SUM(age) AS age_sum
+  FROM people

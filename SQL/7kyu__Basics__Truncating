@@ -1,3 +1,3 @@
 --REQ: SUM() number1 and number2
 --REQ: Truncate result towards zero
-SELECT FLOOR(number1 + number2) AS towardzero FROM decimals
+SELECT TRUNC(number1 + number2) AS towardzero FROM decimals

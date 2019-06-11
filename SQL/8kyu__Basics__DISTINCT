@@ -1,0 +1,3 @@
+--REQ: Get distinct ages from table "people"
+SELECT DISTINCT people.age
+           FROM people

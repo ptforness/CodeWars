@@ -1,0 +1,6 @@
+--REQ: Get only the first characteristic for each monster
+  SELECT monsters.id
+       , monsters.name
+       , SPLIT_PART(monsters.characteristics, ',', 1) AS characteristic
+    FROM monsters
+ORDER BY monsters.id

@@ -1,0 +1,8 @@
+--REQ: Use a IN subquery to get all department names and ids with at least 1
+--     sale greater than 98 dollars.
+SELECT departments.id
+     , departments.name
+  FROM departments
+ WHERE id IN (SELECT sales.department_id
+                FROM sales
+               WHERE sales.price > 98.00)

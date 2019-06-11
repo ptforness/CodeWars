@@ -1,0 +1,6 @@
+--REQ: Get all names where the first name is at least 6 letters long
+--REQ: Use a LIKE statement
+SELECT first_name
+     , last_name
+  FROM names
+ WHERE first_name LIKE '%______%'

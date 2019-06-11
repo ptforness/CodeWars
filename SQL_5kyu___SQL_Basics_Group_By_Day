@@ -1,0 +1,9 @@
+--REQ: Return date, description, and event count
+--REQ: Using HAVING clause, filter by date
+--REQ: GROUP BY date, name, and description (latter two are implicit requirements)
+  SELECT events.created_at::date AS day
+       , events.description
+       , COUNT(events.id) AS count
+    FROM events
+GROUP BY events.created_at::date, events.name, events.description
+  HAVING events.name = 'trained'

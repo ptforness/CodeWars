@@ -1,0 +1,8 @@
+--REQ: SELECT statement including EXISTS for sales > 98.00
+SELECT departments.id
+     , departments.name
+  FROM departments
+ WHERE EXISTS(SELECT sales.price
+                FROM sales
+               WHERE sales.department_ID = departments.id
+                 AND sales.price > 98.00)

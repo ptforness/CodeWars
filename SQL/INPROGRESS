@@ -1,0 +1,12 @@
+SELECT film.title
+  FROM film
+  JOIN film_actor
+    ON film.film_id = film_actor.film_id
+  JOIN actor
+    ON film_actor.actor_id = actor.actor_id
+ WHERE '105' IN (SELECT film_actor.actor_id
+                   FROM film_actor
+                  WHERE '122' IN (SELECT film_actor.actor_id
+                                    FROM film_actor))
+                                    
+ https://www.codewars.com/kata/relational-division-find-all-movies-two-actors-cast-in-together/train/sql

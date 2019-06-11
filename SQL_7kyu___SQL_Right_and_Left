@@ -1,0 +1,5 @@
+--REQ: Return first x characters of project name, where x = commits.
+--REQ: REturn last y characters of project address, where y = contributors.
+SELECT LEFT(project, commits) AS project,
+       RIGHT(address, contributors) AS address
+  FROM repositories

@@ -1,0 +1,13 @@
+//LINK: https://www.codewars.com/kata/geometry-basics-distance-between-points-in-2d/train/csharp
+
+using System;
+
+public class Kata
+{
+  public static double DistanceBetweenPoints(Point a, Point b)
+  {
+      double xDiff = a.X - b.X;
+      double yDiff = a.Y - b.Y;
+      return Math.Sqrt(Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2));
+  }
+}

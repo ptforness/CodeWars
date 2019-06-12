@@ -1,0 +1,8 @@
+--REQ: Print "Even" or "Odd" depending on whether numbers.number is even... or odd.
+SELECT CASE WHEN MOD(numbers.number, 2) = 0
+            THEN 'Even'
+            ELSE 'Odd'
+        END AS is_even
+  FROM numbers
+  
+  --LINK: https://www.codewars.com/kata/even-or-odd/train/sql

@@ -1,0 +1,4 @@
+--LINK: https://www.codewars.com/kata/sql-basics-mod/train/sql
+
+SELECT MOD(decimals.number1, decimals.number2) AS mod
+  FROM decimals

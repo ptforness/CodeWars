@@ -1,0 +1,17 @@
+--REQ: Find all films where Sidney Crowe (ID = 105) and Salma Nolte (ID = 122)
+--     co-starred.
+WITH cte AS (SELECT film.title AS title
+                  , COUNT(title) AS title_count
+               FROM film
+               JOIN film_actor
+                 ON film.film_ID = film_actor.film_ID
+              WHERE film_actor.actor_ID = '105'
+                 OR film_actor.actor_ID = '122'
+           GROUP BY title)
+                 
+   SELECT title
+     FROM (SELECT title, title_count FROM cte) title_count
+    WHERE title_count > 1
+ ORDER BY title
+ 
+ --LINK: https://www.codewars.com/kata/relational-division-find-all-movies-two-actors-cast-in-together/train/sql

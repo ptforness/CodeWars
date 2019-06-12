@@ -1,0 +1,12 @@
+--LINK: https://www.codewars.com/kata/conditional-count/train/sql
+  
+  SELECT DATE_PART('month', payment_date) AS month
+       , COUNT(payment)      AS total_count
+       , SUM(payment.amount) AS total_amount
+       , COUNT(payment)      FILTER (WHERE staff_id = 1) AS mike_count
+       , SUM(payment.amount) FILTER (WHERE staff_id = 1) AS mike_amount
+       , COUNT(payment)      FILTER (WHERE staff_id = 2) AS jon_count
+       , SUM(payment.amount) FILTER (WHERE staff_id = 2) AS jon_amount
+    FROM payment
+GROUP BY month
+ORDER BY month

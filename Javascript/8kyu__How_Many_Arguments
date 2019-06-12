@@ -1,0 +1,10 @@
+--LINK: https://www.codewars.com/kata/how-many-arguments/train/javascript
+
+function args_count(...args){
+    let count = 0;
+    for (var a in args){
+        count += 1;
+    }
+    
+    return count;
+}

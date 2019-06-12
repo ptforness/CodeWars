@@ -1,0 +1,7 @@
+--LINK: https://www.codewars.com/kata/sql-basics-simple-having/train/sql
+  
+  SELECT people.age
+       , COUNT(people) AS total_people
+    FROM people
+GROUP BY people.age
+  HAVING COUNT(people) >= 10

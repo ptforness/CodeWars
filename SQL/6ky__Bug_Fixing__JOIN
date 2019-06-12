@@ -1,0 +1,23 @@
+--LINK: https://www.codewars.com/kata/sql-bug-fixing-fix-the-join/train/sql
+
+--Before:
+SELECT 
+  j.jobs_title,
+  SUM(j.salary) / COUNT(p) as average_salarys,
+  COUNT(p.id) as total_peoples,
+  SUM(j.salary),2 as total_salarys
+  FROM people p
+    JOIN job j
+  GROUP BY j.job_title
+  ORDER BY total_salarys
+  
+  --After:
+  SELECT job.job_title
+       , ROUND((SUM(job.salary)/COUNT(people.id)), 2)::float AS average_salary
+       , COUNT(people.id) AS total_people
+       , ROUND(SUM(job.salary), 2)::float AS total_salary
+    FROM people
+    JOIN job
+      ON people.id = job.people_id
+GROUP BY job.job_title
+ORDER BY average_salary DESC

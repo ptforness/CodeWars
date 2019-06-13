@@ -3,6 +3,6 @@
   SELECT COUNT(products.id) AS products
        , country
     FROM products
-   WHERE country IN ('USA', 'Canada')
+   WHERE country IN ('United States of America', 'Canada')
 GROUP BY country
 ORDER BY COUNT(products.id) DESC

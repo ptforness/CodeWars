@@ -1,0 +1,5 @@
+LINK: https://www.codewars.com/kata/easy-sql-absolute-value-and-log-to-base/train/sql
+
+SELECT ABS(decimals.number1) AS abs
+     , LOG(64, decimals.number2) AS log
+  FROM decimals

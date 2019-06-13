@@ -1,0 +1,8 @@
+--LINK: https://www.codewars.com/kata/grocery-store-support-local-products/train/sql
+
+  SELECT COUNT(products.id) AS products
+       , country
+    FROM products
+   WHERE country IN ('USA', 'Canada')
+GROUP BY country
+ORDER BY COUNT(products.id) DESC

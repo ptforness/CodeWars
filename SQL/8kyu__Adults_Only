@@ -1,0 +1,6 @@
+--LINK: https://www.codewars.com/kata/adults-only-sql-for-beginners-number-1/train/sql
+
+SELECT users.name
+     , users.age
+  FROM users
+ WHERE users.age >= 18

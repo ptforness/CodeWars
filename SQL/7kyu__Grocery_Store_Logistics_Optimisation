@@ -1,0 +1,7 @@
+--LINK: https://www.codewars.com/kata/grocery-store-logistic-optimisation/train/sql
+
+  SELECT COUNT(products.name) AS unique_products
+       , products.producer
+    FROM products
+GROUP BY products.producer
+ORDER BY COUNT(products.name) DESC, producer ASC

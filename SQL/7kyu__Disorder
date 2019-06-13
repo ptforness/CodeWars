@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/sql-disorder/train/sql
+
+  SELECT number
+    FROM numbers
+ORDER BY RANDOM()

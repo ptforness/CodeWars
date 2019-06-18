@@ -1,0 +1,5 @@
+--LINK: https://www.codewars.com/kata/easy-sql-convert-to-hexadecimal/train/sql
+
+SELECT TO_HEX(legs) AS legs
+     , TO_HEX(arms) AS arms
+  FROM monsters

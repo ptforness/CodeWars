@@ -1,0 +1,12 @@
+--LINK: https://www.codewars.com/kata/sql-basics-create-a-function/train/sql
+
+CREATE FUNCTION increment(_t text, _c text)
+RETURNS VOID AS
+$$
+
+BEGIN
+EXECUTE FORMAT('UPDATE TABLE %I
+                   SET %I = %I + 1', _t, _c);
+END;
+    
+$$ LANGUAGE plpgsql;

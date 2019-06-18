@@ -1,0 +1,6 @@
+--LINK: https://www.codewars.com/kata/sql-basics-simple-where-and-order-by/train/sql
+
+  SELECT *
+    FROM people
+   WHERE people.age > 50
+ORDER BY people.age DESC

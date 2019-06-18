@@ -1,0 +1,8 @@
+--LINK: https://www.codewars.com/kata/grocery-store-real-price/train/sql
+
+  SELECT p.name
+       , p.weight
+       , p.price
+       , ROUND(p.price::numeric / p.weight::numeric * 1000, 2) AS price_per_kg
+    FROM products p
+ORDER BY ROUND(p.price::numeric / p.weight::numeric * 1000, 2), p.name ASC

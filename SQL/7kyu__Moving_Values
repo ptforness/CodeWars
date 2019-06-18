@@ -1,0 +1,8 @@
+--LINK: https://www.codewars.com/kata/easy-sql-moving-values/train/sql
+
+SELECT LENGTH(monsters.name::text) AS id
+     , LENGTH(monsters.legs::text) AS name
+     , LENGTH(monsters.arms::text) AS legs
+     , LENGTH(monsters.characteristics::text) AS arms
+     , LENGTH(monsters.id::text) AS characteristics
+  FROM monsters

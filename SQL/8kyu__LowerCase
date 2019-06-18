@@ -1,0 +1,7 @@
+--LINK: https://www.codewars.com/kata/easy-sql-lowercase/train/sql
+
+SELECT demographics.id
+     , demographics.name
+     , demographics.birthday
+     , LOWER(demographics.race) AS race
+  FROM demographics

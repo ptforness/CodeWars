@@ -1,0 +1,6 @@
+--LINK: https://www.codewars.com/kata/register-for-the-party-sql-for-beginners-number-3/train/sql
+
+INSERT INTO participants(name, age, attending)
+     VALUES ('Paul', 21, TRUE);
+
+SELECT * FROM participants;

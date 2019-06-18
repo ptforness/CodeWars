@@ -1,0 +1,5 @@
+--LINK: https://www.codewars.com/kata/easy-sql-square-root-and-log/train/sql
+
+SELECT |/ number1   AS root
+     , LOG(number2) AS log
+  FROM decimals
